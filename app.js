@@ -10,6 +10,29 @@ const handleFormSubmission = (id) =>{
     console.log(username.value);
     return username.value;
 }
+
+const handlenewEvent = () => {
+    console.log("hello")
+    let container = document.querySelector('.container');
+    container.innerHTML = "";
+    container.innerHTML = 
+    `
+        <form action='index.html' method='post'>
+            <label for='name'>Name</label>
+            <input type='text' id='name'>
+            <button type='button' id='name-button'> Submit</button>
+        </form>
+    `
+    const eventName = document.getElementById('event-name');
+    const date =  document.getElementById('event-name');
+    const time =  document.getElementById('event-name');
+    const description = document.getElementById('event-name');
+    new_event = new Event(eventName, date, time, description);
+}
+
+const event_button = document.querySelector('#event-button');
+event_button.addEventListener("click", handlenewEvent())
+
 class Event{
     constructor(eventName, date, time, description) {
        this.eventName = eventName,
@@ -34,8 +57,8 @@ class User extends Event{
         this.schedule = {};
     }
     add(Event) {
-        this.schedule[event.name] = event;
-        console.log(event); //debug
+        this.schedule[Event.name] = Event;
+        console.log(Event); //debug
     }
 }
 
