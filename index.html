@@ -5,12 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanctum</title>
+    <!-- link javascript file -->
+    <!-- link css file -->
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <!-- create a form to get a person's name -->
-    <form action="index.html" method="post">
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name">
-        <input type="submit" value="Submit">
+    <div class="name">
+        <form action="index.html" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+    <script src="./app.js" defer> </script>
 </body>
 </html>
