@@ -1,18 +1,6 @@
-
-class User {
-    constructor() {
-        const username = prompt("What is your username?");
-        this.username = username,
-        this.schedule = {}
-    }
-    add(event) {
-        console.log(event); //debug
-    }
-}
-
-class Event extends User {
+class Event{
     constructor(eventName, date, time, description) {
-       this.event = eventName,
+       this.eventName = eventName,
        this.time = time,
        this.description = description,
        this.date = date,
@@ -24,6 +12,21 @@ class Event extends User {
         return;
     }
 }
+
+
+class User extends Event{
+    constructor() {
+        const username = document.getElementById("name").value; 
+        this.username = username;
+        console.log(this.username);
+        this.schedule = {};
+    }
+    add(Event) {
+        this.schedule[event.name] = event;
+        console.log(event); //debug
+    }
+}
+
 
 class Schedule extends User {
     constructor() {
@@ -41,3 +44,7 @@ class Lecture extends Event {
     }
 
 }
+
+
+
+let user  = new User();
