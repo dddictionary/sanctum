@@ -6,7 +6,7 @@ function handleNewEvent() {
 
     for (let i = 0; i < event_ids.length; i++) {
         data = event_ids[i];
-        container.innerHTML += 
+        container.innerHTML = 
         `
             <form action='index.html' method='post'>
                 <label>Enter event ${data}: </label>
