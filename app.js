@@ -5,15 +5,11 @@ name_button.addEventListener('click', () => {
     location.href = 'main_page.html';
 });
 
-
-
 const handleFormSubmission = (id) =>{
     const username = document.getElementById(id);
     console.log(username.value);
     return username.value;
 }
-
-
 class Event{
     constructor(eventName, date, time, description) {
        this.eventName = eventName,

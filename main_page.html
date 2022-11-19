@@ -10,12 +10,21 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="month">
-        <ul>
-            <li class="prev">&#10094;</li>
-            <li class="next">&#10095;</li>
-            <li>August<br><span style="font-size:18px">2021</span></li>
-        </ul>
+    <!-- create a form to add a schedule -->
+    <div class="schedule">
+        <form action="index.html" method="post">
+            <label for="schedule">Schedule</label>
+            <input type="text" id="schedule">
+            <button type="button" id="schedule-button"> Submit</button>
+        </form>
+    </div>
+    <div class="month hidden">
+        <div>
+            <ul>
+                <li class="prev">&#10094;</li>
+                <li class="next">&#10095;</li>
+                <li>August<br><span style="font-size:18px">2021</span></li>
+            </ul>
         </div>
         
         <ul class="weekdays">
@@ -42,5 +51,6 @@
         <li>11</li>
         ...etc
         </ul>
+    </div>
 </body>
 </html>

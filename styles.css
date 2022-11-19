@@ -1,5 +1,5 @@
 /* center the name div horizontally and vertically*/
-.name{
+.name, .schedule{
     text-align: center;
     position: absolute;
     top: 50%;
@@ -79,4 +79,8 @@ body {font-family: Verdana, sans-serif;}
   padding: 5px;
   background: #1abc9c;
   color: white !important
+}
+
+.hidden{
+    display: none;
 }
