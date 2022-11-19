@@ -1,8 +1,19 @@
+const name_button = document.getElementById('name-button');
+name_button.addEventListener('click', () => {
+    const name = document.getElementById('name').value;
+    console.log(name);
+    location.href = 'main_page.html';
+});
 
-const Submit = () =>{
-    const username = document.getElementById('name');
+
+
+const handleFormSubmission = (id) =>{
+    const username = document.getElementById(id);
     console.log(username.value);
+    return username.value;
 }
+
+
 class Event{
     constructor(eventName, date, time, description) {
        this.eventName = eventName,
@@ -21,7 +32,7 @@ class Event{
 
 class User extends Event{
     constructor() {
-        const username = document.querySelector("#name").value; 
+        const username = handleFormSubmission('name');
         this.username = username;
         console.log(this.username);
         this.schedule = {};
