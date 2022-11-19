@@ -1,8 +1,7 @@
 const name_button = document.getElementById('name-button');
 name_button.addEventListener('click', () => {
     const name = document.getElementById('name').value;
-    console.log(name);
-    location.href = './c_index.html';
+    location.href = './main_page.html';
 });
 
 const handleFormSubmission = id =>{
