@@ -1,18 +1,14 @@
-function handleButtonClick(){
-    const name_button = document.getElementById('name-button');
-    name_button.addEventListener('click', () => {
+const name_button = document.getElementById('name-button');
+name_button.addEventListener('click', () => {
     const name = document.getElementById('name').value;
     console.log(name);
     location.href = 'main_page.html';
 });
-}
-
-
 
 const handleFormSubmission = id =>{
-    const username = document.getElementById(id);
-    console.log(username.value);
-    return username.value;
+    const form = document.getElementById(id);
+    console.log(form.value);
+    // return form.value;
 }
 
 function handleNewEvent() {
@@ -30,11 +26,16 @@ function handleNewEvent() {
             <form action='index.html' method='post'>
                 <label for='name'>Enter event ${attr}: </label>
                 <input type='text' id='${data}'>
-                <button type='button' id='name-button' onclick='handleButtonClick()'> Submit</button>
+                <button type='button' id='submit_button'> Submit</button>
             </form>
         `;
         
-        console.log(handleFormSubmission(data));
+        handleFormSubmission(data);
+        // const submit_button = document.getElementById('submit_button');
+        // submit_button.addEventListener('click', () => {
+        //     const id = document.getElementById(`${data}`).value;
+        //     console.log(id);
+        // });
     });
     // console.log(event_data);
     // new_event = new Event(eventName, date, time, description);
