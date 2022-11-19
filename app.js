@@ -11,7 +11,7 @@ const handleFormSubmission = (id) =>{
     return username.value;
 }
 
-const handlenewEvent = () => {
+function handleNewEvent() {
     console.log("hello")
     let container = document.querySelector('.container');
     container.innerHTML = "";
@@ -30,8 +30,8 @@ const handlenewEvent = () => {
     new_event = new Event(eventName, date, time, description);
 }
 
-const event_button = document.querySelector('#event-button');
-event_button.addEventListener("click", handlenewEvent())
+// const event_button = document.querySelector('#event-button');
+// event_button.addEventListener("click", handleNewEvent())
 
 class Event{
     constructor(eventName, date, time, description) {

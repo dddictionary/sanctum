@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanctum</title>
     <!-- link javascript file -->
-    <script src="./app.js" defer></script>
+    
     <!-- link css file -->
     <link rel="stylesheet" href="./styles.css">
 </head>
@@ -14,7 +14,7 @@
     <!-- create a form to add a schedule -->
     <div class="container">
         
-        <button type="button" id="event-button">Enter an Event!</button>
+        <button type="button" id="event-button" onclick="handleNewEvent()">Enter an Event!</button>
 
         <div class="month hidden">
             <div>
@@ -51,5 +51,6 @@
             </ul>
         </div>
     </div>
+    <script src="./app.js" defer></script>
 </body>
 </html>
