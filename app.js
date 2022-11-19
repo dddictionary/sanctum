@@ -14,28 +14,26 @@ const handleFormSubmission = id =>{
 function handleNewEvent() {
     console.log("hello")
     let container = document.querySelector('.container');
-    let event_ids = ["event-name","event-date","event-time","event-description"];
+    let event_ids = ["name","date","time","description"];
     let event_data = {};
 
 
     event_ids.forEach(data => {
-        //remove the first six letters of data
-        let attr = data.slice(6);
+        console.log("hello")
         container.innerHTML = 
         `
             <form action='index.html' method='post'>
-                <label for='name'>Enter event ${attr}: </label>
+                <label>Enter event ${data}: </label>
                 <input type='text' id='${data}'>
                 <button type='button' id='submit_button'> Submit</button>
             </form>
         `;
         
-        handleFormSubmission(data);
-        // const submit_button = document.getElementById('submit_button');
-        // submit_button.addEventListener('click', () => {
-        //     const id = document.getElementById(`${data}`).value;
-        //     console.log(id);
-        // });
+        const submit_button = document.getElementById('submit_button');
+        submit_button.addEventListener('click', () => {
+            const id = document.getElementById(`${data}`).value;
+            console.log(id);
+        });
     });
     // console.log(event_data);
     // new_event = new Event(eventName, date, time, description);
