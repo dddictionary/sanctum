@@ -1,11 +1,15 @@
-const name_button = document.getElementById('name-button');
-name_button.addEventListener('click', () => {
+function handleButtonClick(){
+    const name_button = document.getElementById('name-button');
+    name_button.addEventListener('click', () => {
     const name = document.getElementById('name').value;
     console.log(name);
     location.href = 'main_page.html';
 });
+}
 
-const handleFormSubmission = (id) =>{
+
+
+const handleFormSubmission = id =>{
     const username = document.getElementById(id);
     console.log(username.value);
     return username.value;
@@ -14,20 +18,26 @@ const handleFormSubmission = (id) =>{
 function handleNewEvent() {
     console.log("hello")
     let container = document.querySelector('.container');
-    container.innerHTML = "";
-    container.innerHTML = 
-    `
-        <form action='index.html' method='post'>
-            <label for='name'>Name</label>
-            <input type='text' id='name'>
-            <button type='button' id='name-button'> Submit</button>
-        </form>
-    `
-    const eventName = document.getElementById('event-name');
-    const date =  document.getElementById('event-name');
-    const time =  document.getElementById('event-name');
-    const description = document.getElementById('event-name');
-    new_event = new Event(eventName, date, time, description);
+    let event_ids = ["event-name","event-date","event-time","event-description"];
+    let event_data = {};
+
+
+    event_ids.forEach(data => {
+        //remove the first six letters of data
+        let attr = data.slice(6);
+        container.innerHTML = 
+        `
+            <form action='index.html' method='post'>
+                <label for='name'>Enter event ${attr}: </label>
+                <input type='text' id='${data}'>
+                <button type='button' id='name-button' onclick='handleButtonClick()'> Submit</button>
+            </form>
+        `;
+        
+        console.log(handleFormSubmission(data));
+    });
+    // console.log(event_data);
+    // new_event = new Event(eventName, date, time, description);
 }
 
 // const event_button = document.querySelector('#event-button');
