@@ -294,3 +294,18 @@ body {
     margin: 5px 0px;
   }
 }
+
+
+/*  align button to top right  */
+.button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--light-btn);
+  color: var(--dark-text);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
